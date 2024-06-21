@@ -25,4 +25,7 @@ interface IEncumbrancePolicy {
         string calldata dataType,
         bytes calldata data
     ) external view returns (bool);
+
+    // Returns true if the policy conflicts with another policy
+    function conflictsWith(IEncumbrancePolicy otherPolicy) external view returns (bool);
 }

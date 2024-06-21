@@ -63,4 +63,11 @@ contract ExampleEncumbrancePolicy is IEncumbrancePolicy {
     ) public pure returns (bool) {
         return true;
     }
+
+    /**
+     * @dev This contract does not conflict with any other policy.
+     */
+    function conflictsWith(IEncumbrancePolicy otherPolicy) public view returns (bool) {
+        return false;
+    }
 }
